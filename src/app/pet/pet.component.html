@@ -1,0 +1,16 @@
+<h1>
+  Pet
+</h1>
+<label>
+  Input link image of pet:
+  <input type="text" [value]="url_image" #input_image style="width: 600px">
+</label>
+<input type="button" (click)="changeImage(input_image.value)" value="Change Image">
+<br/>
+<label>
+  Input name of pet:
+  <input type="text" [value]="name" (input)="changeName($event.target.value)">
+</label>
+<br/>
+<p>Pet name: {{name}}</p>
+<img [src]="url_image" alt="pet picture" style="margin-top: 20px">
